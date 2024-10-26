@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  pdftk-container:
+    container_name: pdftk-container
+    image: pdftk-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./pdfs:/app/pdfs
+    ports:
+      - "3000:3000"
+
